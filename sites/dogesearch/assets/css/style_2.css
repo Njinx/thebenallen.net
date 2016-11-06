@@ -1,0 +1,40 @@
+body {
+    background-image: url(../images/doge_background.png);
+    background-color: #CCFFFF;
+}
+.title {
+    font-family: 'Rancho', serif;
+    font-size: 60px
+}
+.text {
+    font-family: 'Open Sans Condensed', serif;
+    font-size: 40px;
+    color: #737373;
+}
+.text_big {
+    font-family: 'Open Sans Condensed', serif;
+    font-size: 60px;
+    color:black;
+}
+.search {
+    padding: 2px;
+    border: solid 2px #c9c9c9;
+    transition: border 0.2s;
+    font-size: 20px;
+    color: #383838;
+    font-family: 'Poiret One', serif;
+    align-content: center;
+}
+.search:hover {
+    border: solid 5px #c9c9c9;
+}
+.search:active {
+    border: solid 6px #000000;
+}
+.google {
+    margin-bottom: 1px;
+    margin-left: 1%;
+    float: left;
+    width: 0px;
+    height: 0px;
+}
