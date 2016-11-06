@@ -57,19 +57,12 @@
             <div class="container-fluid no-hide">
                 
                 <!-- Navbar -->
-                <ul class="nav navbar-nav hidden-xs" role="navigation">
-                    <li id="projects"><a style="font-size: 1.3em"><i class="fa fa-code" aria-hidden="true"></i>My Projects</a></li>
-                    <li id="about"><a style="font-size: 1.3em"><i class="fa fa-user" aria-hidden="true"></i>About Me</a></li>
-                    <li id="home"><a style="font-size: 1.6em"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
-                    <li id="skills"><a style="font-size: 1.3em"><i class="fa fa-paint-brush" aria-hidden="true"></i>My Skills</a></li>
-                    <li id="contact"><a style="font-size: 1.3em"><i class="fa fa-envelope-o" aria-hidden="true"></i>Get in Touch</a></li>
-                </ul>
-                <ul class="nav navbar-nav visible-xs" role="navigation">
-                    <li><a id="projects" style="font-size: 1.3em"><i class="fa fa-code" aria-hidden="true"></i></a></li>
-                    <li><a id="about" style="font-size: 1.3em"><i class="fa fa-user" aria-hidden="true"></i></a></li>
-                    <li><a id="home" style="font-size: 1.6em"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-                    <li><a id="skills" style="font-size: 1.3em"><i class="fa fa-paint-brush" aria-hidden="true"></i></a></li>
-                    <li><a id="contact" style="font-size: 1.3em"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+                <ul class="nav navbar-nav" role="navigation">
+                    <li id="projects"><a style="font-size: 1.4em"><i class="fa fa-code" aria-hidden="true"></i><p class="navbar-nav hidden-xsmall">My Projects</p></a></li>
+                    <li id="about"><a style="font-size: 1.4em"><i class="fa fa-user" aria-hidden="true"></i><p class="navbar-nav hidden-xsmall">About Me</p></a></li>
+                    <li id="home"><a style="font-size: 1.4em"><i class="fa fa-home" aria-hidden="true"></i><p class="navbar-nav hidden-xsmall">Home</p></a></li>
+                    <li id="skills"><a style="font-size: 1.4em"><i class="fa fa-paint-brush" aria-hidden="true"></i><p class="navbar-nav hidden-xsmall">My Skills</p></a></li>
+                    <li id="contact"><a style="font-size: 1.4em"><i class="fa fa-envelope-o" aria-hidden="true"></i><p class="navbar-nav hidden-xsmall">Get in Touch</p></a></li>
                 </ul>
             </div>
         </nav>
@@ -86,11 +79,12 @@
         </footer>
     </div>
     <script>
-        $(document).ready(function() {            
+        $(document).ready(function() {
             // Page Reload on Resize
             $(window).resize(function() {
                 location.reload();
             });
+            
             
             // Arrows (This needs some cleaning up)
             $('.arrow-right').click(function() {
@@ -173,6 +167,7 @@
                 
             });
             
+            
             // AJAX home.html
             $('#card-info').fadeOut(0).load('/ajax/home.html');
             
@@ -221,6 +216,14 @@
                     });
                 }
             });
+            
+            if ($(window).width() < 838) {
+               $('.hidden-xsmall').hide(); 
+            }
+            else {
+                $('p.hidden-xsmall').show();
+            }
+            
         });
     </script>
 </body>
