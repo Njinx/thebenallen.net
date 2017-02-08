@@ -86,7 +86,7 @@
             });
             
             // AJAX home.html
-            $('#card-info').fadeOut(0).load('/ajax/home.html');
+            $('#card-info').fadeOut(0).load('ajax/home.html');
             
             // Arrows
             var $arrowDirection
@@ -96,7 +96,7 @@
             function arrowsRight($cardValue, $cardPath) {
                 $('div#' + $cardValue).animate({right:'1000%'},500, function() {
                     $(this).hide();
-                    $('#card-info').fadeOut(0).load('/ajax/' + $cardPath + '.html', function() {
+                    $('#card-info').fadeOut(0).load('ajax/' + $cardPath + '.html', function() {
                         $(this).fadeIn(200);
                     });
                 });
@@ -105,7 +105,7 @@
             function arrowsLeft($cardValue, $cardPath) {
                 $('div#' + $cardValue).animate({left:'1000%'},500, function() {
                     $(this).hide();
-                    $('#card-info').fadeOut(0).load('/ajax/' + $cardPath + '.html', function() {
+                    $('#card-info').fadeOut(0).load('ajax/' + $cardPath + '.html', function() {
                         $(this).fadeIn(200);
                     });
                 });
@@ -158,35 +158,35 @@
             // Navigation (This could use some cleaning up)
             $('#projects *').click(function() {
                 if ($('div#projects').length < 1) {
-                    $('#card-info').fadeOut(0).load('/ajax/projects.html', function() {
+                    $('#card-info').fadeOut(0).load('ajax/projects.html', function() {
                         $(this).fadeIn(500);
                     });
                 }
             });
             $('#about *').click(function() {
                 if ($('div#about').length < 1) {
-                    $('#card-info').fadeOut(0).load('/ajax/about.html', function() {
+                    $('#card-info').fadeOut(0).load('ajax/about.html', function() {
                         $(this).fadeIn(500);
                     });
                 }
             });
             $('#home *').click(function() {
                 if ($('div#home').length < 1) {  
-                    $('#card-info').fadeOut(0).load('/ajax/home.html', function() {
+                    $('#card-info').fadeOut(0).load('ajax/home.html', function() {
                         $(this).fadeIn(500);
                     });
                 }
             });
             $('#skills *').click(function() {
                 if ($('div#skills').length < 1) {
-                    $('#card-info').fadeOut(0).load('/ajax/skills.html', function() {
+                    $('#card-info').fadeOut(0).load('ajax/skills.html', function() {
                         $(this).fadeIn(500);
                     });
                 }
             });
             $('#contact *').click(function() {
                 if ($('div#contact').length < 1) {
-                    $('#card-info').fadeOut(0).load('/ajax/contact.html', function() {
+                    $('#card-info').fadeOut(0).load('ajax/contact.html', function() {
                         $(this).fadeIn(500);
                     });
                 }
