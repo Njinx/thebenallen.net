@@ -71,7 +71,7 @@
         <div id="card-info">
         </div>
         <div class="arrow-wrapper">
-            <i class=" visible-lg arrow-left pull-left fa fa-arrow-circle-o-left fa-4x" aria-hidden="true"></i>
+            <i class="visible-lg arrow-left pull-left fa fa-arrow-circle-o-left fa-4x" aria-hidden="true"></i>
             <i class="visible-lg arrow-right pull-right fa fa-arrow-circle-o-right fa-4x" aria-hidden="true"></i>
         </div>
         <footer id="footer">
@@ -85,92 +85,67 @@
                 location.reload();
             });
             
-            
-            // Arrows (This needs some cleaning up)
-            $('.arrow-right').click(function() {
-                
-                if ($('div#projects').length) {
-                    $('div#projects').animate({'right':'1000%'},500, function() {
-                        $(this).hide();
-                        $('#card-info').fadeOut(0).load('/ajax/about.html', function() {
-                            $(this).fadeIn(200)
-                        });
-                    });
-                }
-                if ($('div#about').length) {
-                    $('div#about').animate({'right':'1000%'},500, function() {
-                        $(this).hide();
-                        $('#card-info').fadeOut(0).load('/ajax/home.html', function() {
-                            $(this).fadeIn(200);
-                        });
-                    });
-                }
-                if ($('div#home').length) {
-                    $('div#home').animate({'right':'1000%'},500, function() {
-                        $(this).hide();
-                        $('#card-info').fadeOut(0).load('/ajax/skills.html', function() {
-                            $(this).fadeIn(200);
-                        });
-                    });
-                }
-                else if ($('div#skills').length) {
-                    $('div#skills').animate({'right':'1000%'},500, function() {
-                        $(this).hide();
-                        $('#card-info').fadeOut(0).load('/ajax/contact.html', function() {
-                            $(this).fadeIn(200);
-                        });
-                    });
-                }
-                else {
-                    console.log('Error.');
-                }
-                
-            });
-            
-            $('.arrow-left').click(function() {
-                
-                if ($('div#about').length) {
-                    $('div#about').animate({'left':'1000%'},500, function() {
-                        $(this).hide();
-                        $('#card-info').fadeOut(0).load('/ajax/projects.html', function() {
-                            $(this).fadeIn(200);
-                        });
-                    });
-                }
-                if ($('div#home').length) {
-                    $('div#home').animate({'left':'1000%'},500, function() {
-                        $(this).hide();
-                        $('#card-info').fadeOut(0).load('/ajax/about.html', function() {
-                            $(this).fadeIn(200);
-                        });
-                    });
-                }
-                if ($('div#skills').length) {
-                    $('div#skills').animate({'left':'1000%'},500, function() {
-                        $(this).hide();
-                        $('#card-info').fadeOut(0).load('/ajax/home.html', function() {
-                            $(this).fadeIn(200);
-                        });
-                    });
-                }
-                if ($('div#contact').length) {
-                    $('div#contact').animate({'left':'1000%'},500, function() {
-                        $(this).hide();
-                        $('#card-info').fadeOut(0).load('/ajax/skills.html', function() {
-                            $(this).fadeIn(200);
-                        });
-                    });
-                }
-                else {
-                    console.log('Error.');
-                }
-                
-            });
-            
-            
             // AJAX home.html
             $('#card-info').fadeOut(0).load('/ajax/home.html');
             
+            // Arrows
+            var $arrowDirection
+            var $cardValue;
+            var $cardPath;
+            
+            function arrowsRight($cardValue, $cardPath) {
+                $('div#' + $cardValue).animate({right:'1000%'},500, function() {
+                    $(this).hide();
+                    $('#card-info').fadeOut(0).load('/ajax/' + $cardPath + '.html', function() {
+                        $(this).fadeIn(200);
+                    });
+                });
+            }
+            
+            function arrowsLeft($cardValue, $cardPath) {
+                $('div#' + $cardValue).animate({left:'1000%'},500, function() {
+                    $(this).hide();
+                    $('#card-info').fadeOut(0).load('/ajax/' + $cardPath + '.html', function() {
+                        $(this).fadeIn(200);
+                    });
+                });
+            }
+            
+            $('.arrow-right').click(function () {
+                if ($('div#projects').length) {
+                    arrowsRight('projects','about');
+                }
+                else if ($('div#about').length) {
+                    arrowsRight('about','home');
+                }
+                else if ($('div#home').length) {
+                    arrowsRight('home','skills');
+                }
+                else if ($('div#skills').length) {
+                    arrowsRight('skills','contact');
+                }
+                else {
+                    return true;
+                }
+            });
+            
+            $('.arrow-left').click(function () {
+                if ($('div#contact').length) {
+                    arrowsLeft('contact','skills');
+                }
+                else if ($('div#skills').length) {
+                    arrowsLeft('skills','home');
+                }
+                else if ($('div#home').length) {
+                    arrowsLeft('home','about');
+                }
+                else if ($('div#about').length) {
+                    arrowsLeft('about','projects');
+                }
+                else {
+                    return true;
+                }
+            });
             // Fade In
             $('*:not(body, html, #background)').slideUp(0);
             $('*:not(head)').fadeIn(1000);
@@ -180,7 +155,7 @@
                 $('div.card-info').css('padding', '10px');
             });
             
-            // Navigation
+            // Navigation (This could use some cleaning up)
             $('#projects *').click(function() {
                 if ($('div#projects').length < 1) {
                     $('#card-info').fadeOut(0).load('/ajax/projects.html', function() {
@@ -227,5 +202,4 @@
         });
     </script>
 </body>
-
 </html>
