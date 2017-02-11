@@ -85,8 +85,8 @@
                 location.reload();
             });
             
-            // AJAX home.html
-            $('#card-info').fadeOut(0).load('ajax/home.html');
+            // AJAX Load home.html
+            $('#card-info').load('ajax/home.html');
             
             // Arrows
             var $arrowDirection
@@ -111,7 +111,7 @@
                 });
             }
             
-            $('.arrow-right').click(function () {
+            $('.arrow-right').click(function() {
                 if ($('div#projects').length) {
                     arrowsRight('projects','about');
                 }
@@ -129,7 +129,7 @@
                 }
             });
             
-            $('.arrow-left').click(function () {
+            $('.arrow-left').click(function() {
                 if ($('div#contact').length) {
                     arrowsLeft('contact','skills');
                 }
@@ -142,56 +142,45 @@
                 else if ($('div#about').length) {
                     arrowsLeft('about','projects');
                 }
-                else {
-                    return true;
-                }
             });
             // Fade In
             $('*:not(body, html, #background)').slideUp(0);
             $('*:not(head)').fadeIn(1000);
             
             // Navbar and Card Overlap Prevention
-            $('nav.navbar').overlaps('div.card-info', function () {
+            $('nav.navbar').overlaps('div.card-info', function() {
                 $('div.card-info').css('padding', '10px');
             });
             
-            // Navigation (This could use some cleaning up)
-            $('#projects *').click(function() {
-                if ($('div#projects').length < 1) {
-                    $('#card-info').fadeOut(0).load('ajax/projects.html', function() {
+            // Navigation
+            var $tabValue;
+            var $loadPath;
+            
+            function navigation($loadPath) {
+                if ($('div#' + $loadPath).length < 1) {
+                    $('#card-info').fadeOut(0).load('/ajax/' + $loadPath + '.html', function() {
                         $(this).fadeIn(500);
                     });
                 }
+            }
+            
+            $('#projects *').click(function() {
+                navigation('projects');
             });
             $('#about *').click(function() {
-                if ($('div#about').length < 1) {
-                    $('#card-info').fadeOut(0).load('ajax/about.html', function() {
-                        $(this).fadeIn(500);
-                    });
-                }
+                navigation('about');
             });
             $('#home *').click(function() {
-                if ($('div#home').length < 1) {  
-                    $('#card-info').fadeOut(0).load('ajax/home.html', function() {
-                        $(this).fadeIn(500);
-                    });
-                }
+                navigation('home');
             });
             $('#skills *').click(function() {
-                if ($('div#skills').length < 1) {
-                    $('#card-info').fadeOut(0).load('ajax/skills.html', function() {
-                        $(this).fadeIn(500);
-                    });
-                }
+                navigation('skills');
             });
             $('#contact *').click(function() {
-                if ($('div#contact').length < 1) {
-                    $('#card-info').fadeOut(0).load('ajax/contact.html', function() {
-                        $(this).fadeIn(500);
-                    });
-                }
+                navigation('contact');
             });
             
+            // Mobile Screen Fix
             if ($(window).width() < 838) {
                $('.hidden-xsmall').hide(); 
             }
