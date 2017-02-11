@@ -172,10 +172,14 @@ nav.navbar {
     top: 0.5vh;
     left: 0.5vh;
     right: 0.5vh;
-    display: flex;
     text-align: center;
-    align-content: center;
     white-space: nowrap;
+    display: flex;
+    a {
+        display: flex;
+        justify-content:space-around;
+        align-items: baseline; 
+    }
     ul.nav {
         width: auto;
         white-space: nowrap;

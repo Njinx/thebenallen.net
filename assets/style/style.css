@@ -183,18 +183,22 @@ nav.navbar {
   top: 0.5vh;
   left: 0.5vh;
   right: 0.5vh;
-  display: flex;
   text-align: center;
-  align-content: center;
-  white-space: nowrap; }
-  /* line 179, C:/Users/Ben Allen/Desktop/Flash_Drive/Bens_Website_AGAIN/assets/style/style.scss */
+  white-space: nowrap;
+  display: flex; }
+  /* line 178, C:/Users/Ben Allen/Desktop/Flash_Drive/Bens_Website_AGAIN/assets/style/style.scss */
+  nav.navbar a {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline; }
+  /* line 183, C:/Users/Ben Allen/Desktop/Flash_Drive/Bens_Website_AGAIN/assets/style/style.scss */
   nav.navbar ul.nav {
     width: auto;
     white-space: nowrap; }
-  /* line 183, C:/Users/Ben Allen/Desktop/Flash_Drive/Bens_Website_AGAIN/assets/style/style.scss */
+  /* line 187, C:/Users/Ben Allen/Desktop/Flash_Drive/Bens_Website_AGAIN/assets/style/style.scss */
   nav.navbar ul.nav li {
     display: inline; }
-    /* line 185, C:/Users/Ben Allen/Desktop/Flash_Drive/Bens_Website_AGAIN/assets/style/style.scss */
+    /* line 189, C:/Users/Ben Allen/Desktop/Flash_Drive/Bens_Website_AGAIN/assets/style/style.scss */
     nav.navbar ul.nav li * {
       color: #212121;
       opacity: 0.9;
@@ -203,57 +207,57 @@ nav.navbar {
       -ms-transition: opacity 0.5s;
       -o-transition: opacity 0.5s;
       transition: opacity 0.5s; }
-    /* line 194, C:/Users/Ben Allen/Desktop/Flash_Drive/Bens_Website_AGAIN/assets/style/style.scss */
+    /* line 198, C:/Users/Ben Allen/Desktop/Flash_Drive/Bens_Website_AGAIN/assets/style/style.scss */
     nav.navbar ul.nav li *:hover {
       opacity: 0.6; }
-    /* line 197, C:/Users/Ben Allen/Desktop/Flash_Drive/Bens_Website_AGAIN/assets/style/style.scss */
+    /* line 201, C:/Users/Ben Allen/Desktop/Flash_Drive/Bens_Website_AGAIN/assets/style/style.scss */
     nav.navbar ul.nav li *:active {
       opacity: 1; }
 
 @media only screen and (max-width: 768px) {
-  /* line 203, C:/Users/Ben Allen/Desktop/Flash_Drive/Bens_Website_AGAIN/assets/style/style.scss */
+  /* line 207, C:/Users/Ben Allen/Desktop/Flash_Drive/Bens_Website_AGAIN/assets/style/style.scss */
   nav.navbar {
     top: 0px;
     right: 0px;
     left: 0px;
     width: 100%; }
-    /* line 208, C:/Users/Ben Allen/Desktop/Flash_Drive/Bens_Website_AGAIN/assets/style/style.scss */
+    /* line 212, C:/Users/Ben Allen/Desktop/Flash_Drive/Bens_Website_AGAIN/assets/style/style.scss */
     nav.navbar ul.nav li * {
       display: inherit; }
-  /* line 212, C:/Users/Ben Allen/Desktop/Flash_Drive/Bens_Website_AGAIN/assets/style/style.scss */
+  /* line 216, C:/Users/Ben Allen/Desktop/Flash_Drive/Bens_Website_AGAIN/assets/style/style.scss */
   html, body {
     overflow-x: scroll; } }
 
-/* line 216, C:/Users/Ben Allen/Desktop/Flash_Drive/Bens_Website_AGAIN/assets/style/style.scss */
+/* line 220, C:/Users/Ben Allen/Desktop/Flash_Drive/Bens_Website_AGAIN/assets/style/style.scss */
 ::-webkit-scrollbar {
   width: 0px;
   height: 0px; }
 
-/* line 220, C:/Users/Ben Allen/Desktop/Flash_Drive/Bens_Website_AGAIN/assets/style/style.scss */
+/* line 224, C:/Users/Ben Allen/Desktop/Flash_Drive/Bens_Website_AGAIN/assets/style/style.scss */
 ::-moz-scrollbar {
   width: 0px;
   height: 0px; }
 
-/* line 224, C:/Users/Ben Allen/Desktop/Flash_Drive/Bens_Website_AGAIN/assets/style/style.scss */
+/* line 228, C:/Users/Ben Allen/Desktop/Flash_Drive/Bens_Website_AGAIN/assets/style/style.scss */
 ::-ms-scrollbar {
   width: 0px;
   height: 0px; }
 
-/* line 228, C:/Users/Ben Allen/Desktop/Flash_Drive/Bens_Website_AGAIN/assets/style/style.scss */
+/* line 232, C:/Users/Ben Allen/Desktop/Flash_Drive/Bens_Website_AGAIN/assets/style/style.scss */
 ::-o-scrollbar {
   width: 0px;
   height: 0px; }
 
 @media only screen and (min-width: 1920px), (min-height: 1080px) {
-  /* line 233, C:/Users/Ben Allen/Desktop/Flash_Drive/Bens_Website_AGAIN/assets/style/style.scss */
+  /* line 237, C:/Users/Ben Allen/Desktop/Flash_Drive/Bens_Website_AGAIN/assets/style/style.scss */
   div#background {
     background-size: 100%; } }
 
-/* line 237, C:/Users/Ben Allen/Desktop/Flash_Drive/Bens_Website_AGAIN/assets/style/style.scss */
+/* line 241, C:/Users/Ben Allen/Desktop/Flash_Drive/Bens_Website_AGAIN/assets/style/style.scss */
 .notfound-heading {
   font-size: 3.125em; }
 
-/* line 240, C:/Users/Ben Allen/Desktop/Flash_Drive/Bens_Website_AGAIN/assets/style/style.scss */
+/* line 244, C:/Users/Ben Allen/Desktop/Flash_Drive/Bens_Website_AGAIN/assets/style/style.scss */
 i {
   position: relative;
   z-index: 5;
@@ -265,21 +269,21 @@ i {
   -o-transition: opacity 0.5s;
   transition: opacity 0.5s; }
 
-/* line 251, C:/Users/Ben Allen/Desktop/Flash_Drive/Bens_Website_AGAIN/assets/style/style.scss */
+/* line 255, C:/Users/Ben Allen/Desktop/Flash_Drive/Bens_Website_AGAIN/assets/style/style.scss */
 i:hover {
   opacity: 0.6; }
 
-/* line 254, C:/Users/Ben Allen/Desktop/Flash_Drive/Bens_Website_AGAIN/assets/style/style.scss */
+/* line 258, C:/Users/Ben Allen/Desktop/Flash_Drive/Bens_Website_AGAIN/assets/style/style.scss */
 .left-arrow {
   right: 90%;
   left: 10%; }
 
-/* line 258, C:/Users/Ben Allen/Desktop/Flash_Drive/Bens_Website_AGAIN/assets/style/style.scss */
+/* line 262, C:/Users/Ben Allen/Desktop/Flash_Drive/Bens_Website_AGAIN/assets/style/style.scss */
 .right-arrow {
   left: 90%;
   right: 10%; }
 
-/* line 262, C:/Users/Ben Allen/Desktop/Flash_Drive/Bens_Website_AGAIN/assets/style/style.scss */
+/* line 266, C:/Users/Ben Allen/Desktop/Flash_Drive/Bens_Website_AGAIN/assets/style/style.scss */
 .arrow-wrapper {
   left: 0;
   right: 0;
@@ -289,7 +293,7 @@ i:hover {
   padding-right: 100px;
   width: 100%; }
 
-/* line 272, C:/Users/Ben Allen/Desktop/Flash_Drive/Bens_Website_AGAIN/assets/style/style.scss */
+/* line 276, C:/Users/Ben Allen/Desktop/Flash_Drive/Bens_Website_AGAIN/assets/style/style.scss */
 .logo {
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -301,7 +305,7 @@ i:hover {
   height: 16vh;
   padding: 0px; }
 
-/* line 284, C:/Users/Ben Allen/Desktop/Flash_Drive/Bens_Website_AGAIN/assets/style/style.scss */
+/* line 288, C:/Users/Ben Allen/Desktop/Flash_Drive/Bens_Website_AGAIN/assets/style/style.scss */
 .logo:hover {
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
