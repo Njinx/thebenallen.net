@@ -75,7 +75,6 @@
             <i class="visible-lg arrow-right pull-right fa fa-arrow-circle-o-right fa-4x" aria-hidden="true"></i>
         </div>
         <footer id="footer">
-            <p class="heading">&copy; 2016 Ben Allen | All Rights Reserved</p>
         </footer>
     </div>
     <script>
@@ -187,6 +186,11 @@
             else {
                 $('p.hidden-xsmall').show();
             }
+            
+            // Footer
+            var d = new Date();
+            var n = d.getFullYear();
+            $('footer').append("<p class='heading'>&copy;" + n + " Ben Allen | All Rights Reserved</p>");
             
         });
     </script>
