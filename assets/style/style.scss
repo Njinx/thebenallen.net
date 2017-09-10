@@ -81,7 +81,7 @@ i {
 }
 vertical-list {
     list-style: none;
-    display: flex; 
+    display: flex;
     align-items: baseline;
     justify-content: center;
     margin: 0 auto;
@@ -178,7 +178,7 @@ nav.navbar {
     a {
         display: flex;
         justify-content:space-around;
-        align-items: baseline; 
+        align-items: baseline;
     }
     ul.nav {
         width: auto;
@@ -201,7 +201,7 @@ nav.navbar {
         *:active {
             opacity: 1;
         }
-    } 
+    }
 }
 @media only screen and (max-width: 768px) {
     nav.navbar {
@@ -212,7 +212,7 @@ nav.navbar {
         ul.nav li * {
             display: inherit;
         }
-    } 
+    }
     html, body {
         overflow-x: scroll;
     }
@@ -271,8 +271,8 @@ i:hover {
     padding-left: 100px;
     padding-right: 100px;
     width: 100%;
-    
-} 
+
+}
 .logo {
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
